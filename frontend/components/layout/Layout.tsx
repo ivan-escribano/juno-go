@@ -84,7 +84,7 @@ const Layout = ({ children }: Props) => {
           </span>
         </div>
       </header>
-      <main className="main-content h-full p-8">{children}</main>
+      <main className="main-content h-full ">{children}</main>
       <footer></footer>
     </>
   );
