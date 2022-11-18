@@ -78,6 +78,67 @@ const Pricing = () => {
                 valuable and active everyday life
               </p>
             </div>
+            <div className="flex justify-center">
+              <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="pricing-plans mt-8 rounded-xl bg-slate-800 p-5 text-white">
+        <div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-5xl font-semibold">99 kr</h3>
+            <p className=" text-2xl font-medium text-blue-500">Free</p>
+            <p>Month</p>
+          </div>
+          <div>
+            <div className="flex p-5">
+              <FaRegCheckCircle className="mr-5 text-4xl" />
+              <p>
+                {" "}
+                Take advantage of the entire Junoversum that offers you a
+                valuable and active everyday life
+              </p>
+            </div>
+            <div className="flex p-5">
+              <FaRegCheckCircle className="mr-5 text-4xl" />
+              <p>
+                {" "}
+                Take advantage of the entire Junoversum that offers you a
+                valuable and active everyday life
+              </p>
+            </div>
+            <div className="flex p-5">
+              <FaRegCheckCircle className="mr-5 text-4xl" />
+              <p>
+                {" "}
+                Take advantage of the entire Junoversum that offers you a
+                valuable and active everyday life
+              </p>
+            </div>
+            <div className="flex p-5">
+              <FaRegCheckCircle className="mr-5 text-4xl" />
+              <p>
+                {" "}
+                Take advantage of the entire Junoversum that offers you a
+                valuable and active everyday life
+              </p>
+            </div>
+            <div className="flex p-5">
+              <FaRegCheckCircle className="mr-5 text-4xl" />
+              <p>
+                {" "}
+                Take advantage of the entire Junoversum that offers you a
+                valuable and active everyday life
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
+              Sign up
+            </button>
           </div>
         </div>
       </section>
