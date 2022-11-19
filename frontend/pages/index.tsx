@@ -9,7 +9,7 @@ export default function Home() {
       <HeaderHome />
       <Activities />
       <Pricing />
-      {/* <CustomerStories /> */}
+      <CustomerStories />
     </>
   );
 }
