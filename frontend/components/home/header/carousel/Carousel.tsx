@@ -9,28 +9,30 @@ const Carousel = () => {
       // install Swiper modules
       modules={[Autoplay]}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
+      spaceBetween={3}
       slidesPerView={1}
       speed={1000}
       loop={true}
-      className="h-full w-full"
+      className="h-full w-full "
     >
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-end md:px-2 md:py-7">
         <img
           src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668705727/juno-go/header1_qw8zke.jpg"
+          alt="Slider image 1"
           className="rounded-lg"
         />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-end md:px-2 md:py-7">
         <img
           src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668705727/juno-go/header3_mqtibe.jpg"
-          alt=""
+          alt="Slider image 2"
           className="rounded-lg"
         />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-end md:px-2 md:py-7">
         <img
           src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668705726/juno-go/header2_ansvxu.jpg"
-          alt=""
+          alt="Slider image 3"
           className="rounded-lg"
         />
       </SwiperSlide>
