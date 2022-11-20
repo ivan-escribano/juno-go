@@ -23,12 +23,12 @@ const ActivityDescription = ({ children, title }: Props) => {
     educates: <FaBookOpen />,
   };
   return (
-    <div className="single-activity my-10 flex w-full flex-col items-center">
-      <div className="text-3xl text-blue-400">
+    <div className="single-activity my-10 flex w-full flex-col items-center px-12">
+      <div className="mb-5 text-4xl text-blue-400">
         {typeIcon[title as keyof ITypeIcon]}
       </div>
-      <h2 className="text-2xl">Juno {title}</h2>
-      <p className="px-14 text-center">{children}</p>
+      <h2 className="mb-2 text-2xl font-medium">Juno {title}</h2>
+      <p className=" text-center text-lg font-normal">{children}</p>
     </div>
   );
 };

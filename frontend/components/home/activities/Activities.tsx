@@ -3,7 +3,7 @@ import ActivityDescription from "./activityDescription/ActivityDescription";
 
 const Activities = () => {
   return (
-    <div className="bg-blue-900 py-5 text-white">
+    <div className="bg-blue-900 py-8 text-white">
       <ActivityDescription title={"activates"}>
         Deliver real-time local events and activities at the touch of a button
       </ActivityDescription>
