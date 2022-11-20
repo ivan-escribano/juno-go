@@ -24,11 +24,11 @@ const ActivityDescription = ({ children, title }: Props) => {
   };
   return (
     <div className="single-activity my-10 flex w-full flex-col items-center px-12">
-      <div className="mb-5 text-4xl text-blue-400">
+      <div className="mb-5 text-4xl text-blue-400 md:text-5xl">
         {typeIcon[title as keyof ITypeIcon]}
       </div>
-      <h2 className="mb-2 text-2xl font-medium">Juno {title}</h2>
-      <p className=" text-center text-lg font-normal">{children}</p>
+      <h2 className="mb-2 text-2xl font-medium md:text-4xl">Juno {title}</h2>
+      <p className=" text-center text-lg font-normal md:px-24">{children}</p>
     </div>
   );
 };
