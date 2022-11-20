@@ -3,7 +3,7 @@ import { Autoplay } from "swiper";
 import "swiper/css";
 const CustomerStories = () => {
   return (
-    <section className="flex h-full flex-col justify-between px-5 pt-12">
+    <section className="flex h-full flex-col justify-between px-5 py-12">
       <h2 className="mb-8 text-3xl font-semibold">Customer stories</h2>
       <Swiper
         // install Swiper modules
