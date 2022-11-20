@@ -7,14 +7,16 @@ interface Props {
 }
 const PriceContainer = ({ price, bgColor, textColor }: Props) => {
   return (
-    <section className={`pricing-plans rounded-xl ${bgColor} ${textColor} p-5`}>
+    <section
+      className={`pricing-plans rounded-xl ${bgColor} ${textColor} my-10 px-5 py-10`}
+    >
       <div>
         <div className="flex flex-col items-center">
-          <h3 className="text-5xl font-semibold">{price} kr</h3>
-          <p className=" text-2xl font-medium text-blue-500">Free</p>
+          <h3 className="text-5xl font-bold">{price} kr</h3>
+          <p className=" my-2 text-2xl font-bold text-blue-500">Free</p>
           <p>Month</p>
         </div>
-        <div>
+        <div className="mt-3">
           <div className="flex p-5">
             <FaRegCheckCircle className="mr-5 flex-1 text-4xl" />
             <p style={{ flex: 11 }}>
@@ -46,7 +48,7 @@ const PriceContainer = ({ price, bgColor, textColor }: Props) => {
             <FaRegCheckCircle className="mr-5 flex-1 text-4xl" />
             <p style={{ flex: 11 }}>Pay your membership monthly by card!</p>
           </div>
-          <div className="flex justify-center">
+          <div className="mt-5 flex justify-center">
             <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
               Sign up
             </button>
