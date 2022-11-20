@@ -1,43 +1,30 @@
 import React from "react";
-import { FaRunning } from "react-icons/fa";
+import ActivityDescription from "./activityDescription/ActivityDescription";
 
 const Activities = () => {
   return (
     <div className="bg-blue-900 py-5 text-white">
-      <div className="single-activity my-10 flex w-full flex-col items-center">
-        <FaRunning className="text-3xl text-blue-400" />
-        <h2 className="text-2xl">Juno activates</h2>
-        <p className="px-14">
-          Deliver real-time local events and activities at the touch of a button
-        </p>
-      </div>
-      <div className="single-activity my-10 flex w-full flex-col items-center">
-        <FaRunning className="text-3xl text-blue-400" />
-        <h2 className="text-2xl">Juno activates</h2>
-        <p className="px-14">
-          Deliver real-time local events and activities at the touch of a button
-        </p>
-      </div>
+      <ActivityDescription title={"activates"}>
+        Deliver real-time local events and activities at the touch of a button
+      </ActivityDescription>
+      <ActivityDescription title={"connects"}>
+        Expand your social network through Juno and build long-lasting
+        relationships
+      </ActivityDescription>
       <div className="px-5">
         <img
           src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668809117/juno-go/welcome-english_kvfzdv.png"
           alt=""
         />
       </div>
-      <div className="single-activity my-10 flex w-full flex-col items-center">
-        <FaRunning className="text-3xl text-blue-400" />
-        <h2 className="text-2xl">Juno activates</h2>
-        <p className="px-14">
-          Deliver real-time local events and activities at the touch of a button
-        </p>
-      </div>
-      <div className="single-activity my-10 flex w-full flex-col items-center">
-        <FaRunning className="text-3xl text-blue-400" />
-        <h2 className="text-2xl">Juno activates</h2>
-        <p className="px-14">
-          Deliver real-time local events and activities at the touch of a button
-        </p>
-      </div>
+      <ActivityDescription title={"inspires"}>
+        There's a world of events, hobbies and sports out there for you to
+        explore
+      </ActivityDescription>
+      <ActivityDescription title={"educates"}>
+        Juno gives you advice on training, nutrition & well-being from our wide
+        network of experts.
+      </ActivityDescription>
     </div>
   );
 };

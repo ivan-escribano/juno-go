@@ -1,10 +1,11 @@
 import React from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
+import PriceContainer from "./priceContainer/PriceContainer";
 
 const Pricing = () => {
   return (
-    <section className="bg-blue-200 p-3">
-      <div className="pricing-content flex flex-col px-12 text-center">
+    <section className="bg-blue-200 p-3 ">
+      <div className="pricing-content flex flex-col  px-12 text-center">
         <h1 className="px-2 text-3xl">Let’s get you started with Juno!</h1>
         <p>
           Your membership gives you access to Juno's wonderful community where
@@ -30,118 +31,16 @@ const Pricing = () => {
           </a>
         </div>
       </div>
-      <section className="pricing-plans rounded-xl bg-slate-50 p-5">
-        <div>
-          <div className="flex flex-col items-center">
-            <h3 className="text-5xl font-semibold">99 kr</h3>
-            <p className=" text-2xl font-medium text-blue-500">Free</p>
-            <p>Month</p>
-          </div>
-          <div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
-                Sign up
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="pricing-plans mt-8 rounded-xl bg-slate-800 p-5 text-white">
-        <div>
-          <div className="flex flex-col items-center">
-            <h3 className="text-5xl font-semibold">99 kr</h3>
-            <p className=" text-2xl font-medium text-blue-500">Free</p>
-            <p>Month</p>
-          </div>
-          <div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-            <div className="flex p-5">
-              <FaRegCheckCircle className="mr-5 text-4xl" />
-              <p>
-                {" "}
-                Take advantage of the entire Junoversum that offers you a
-                valuable and active everyday life
-              </p>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
-              Sign up
-            </button>
-          </div>
-        </div>
-      </section>
+      <PriceContainer
+        price="99"
+        bgColor="bg-slate-100"
+        textColor="text-black"
+      />
+      <PriceContainer
+        price="999"
+        bgColor="bg-blue-900"
+        textColor="text-white"
+      />
     </section>
   );
 };
