@@ -4,11 +4,12 @@ interface Props {
   price: string;
   bgColor: string;
   textColor: string;
+  feeTime: string;
 }
-const PriceContainer = ({ price, bgColor, textColor }: Props) => {
+const PriceContainer = ({ price, bgColor, textColor, feeTime }: Props) => {
   return (
     <section
-      className={`pricing-plans rounded-xl ${bgColor} ${textColor} my-10 px-5 py-10`}
+      className={`pricing-plans mx-10 rounded-xl ${bgColor} ${textColor} my-10 px-5 py-10`}
     >
       <div>
         <div className="flex flex-col items-center">
@@ -20,7 +21,7 @@ const PriceContainer = ({ price, bgColor, textColor }: Props) => {
             {price} kr
           </h3>
           <p className=" my-2 text-2xl font-bold text-blue-500">Free</p>
-          <p>Month</p>
+          <p>{feeTime}</p>
         </div>
         <div className="mt-3">
           <div className="flex p-5">

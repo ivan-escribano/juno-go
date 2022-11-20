@@ -28,7 +28,7 @@ const ActivityDescription = ({ children, title }: Props) => {
         {typeIcon[title as keyof ITypeIcon]}
       </div>
       <h2 className="mb-2 text-2xl font-medium md:text-4xl">Juno {title}</h2>
-      <p className=" text-center text-lg font-normal md:px-24">{children}</p>
+      <p className=" text-center text-lg font-normal md:w-80 ">{children}</p>
     </div>
   );
 };
