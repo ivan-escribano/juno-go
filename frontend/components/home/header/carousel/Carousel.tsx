@@ -1,17 +1,19 @@
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 // import SwiperCore, { Autoplay } from "swiper";
-import { Autoplay } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-fade";
 const Carousel = () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Autoplay]}
+      modules={[Autoplay, EffectFade]}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       spaceBetween={3}
       slidesPerView={1}
-      speed={1000}
+      effect="fade"
+      speed={1500}
       loop={true}
       className="h-full w-full "
     >
