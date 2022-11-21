@@ -7,7 +7,7 @@ const HeaderHome = () => {
   return (
     <motion.section
       className="flex h-full flex-col p-6 dark:bg-black dark:text-white md:h-screen md:flex-row md:items-center md:px-32"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0.2, x: -100 }}
       animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
     >
       <div className="md:flex md:flex-col">
