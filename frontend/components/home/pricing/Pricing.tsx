@@ -5,7 +5,7 @@ import PriceContainer from "./priceContainer/PriceContainer";
 
 const Pricing = () => {
   return (
-    <section className="bg-blue-200 p-4 ">
+    <section className="bg-blue-200 p-4 dark:bg-black dark:text-white">
       <div className="pricing-content my-10 flex flex-col px-10 text-center  md:items-center">
         <h1 className="px-2 text-3xl font-medium md:text-5xl">
           Let’s get you started with Juno!
@@ -26,13 +26,13 @@ const Pricing = () => {
       <div className="md:mx-36 md:flex">
         <PriceContainer
           price="99"
-          bgColor="bg-white"
+          bgColor="bg-white dark:bg-slate-600 dark:text-white"
           textColor="text-black"
           feeTime="Month"
         />
         <PriceContainer
           price="999"
-          bgColor="bg-blue-900"
+          bgColor="bg-blue-900 "
           textColor="text-white"
           feeTime="Year"
         />

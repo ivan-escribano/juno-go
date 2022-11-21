@@ -9,3 +9,8 @@
 .main-text {
   color: rgb(27, 170, 204);
 }
+
+.black-mode {
+  background-color: black;
+  color: white;
+}

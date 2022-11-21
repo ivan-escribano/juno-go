@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <FadeAnimation>
       <footer className=" flex flex-col items-center bg-black p-5 text-white">
-        <span className="my-5 h-0.5 w-full bg-white"></span>
+        <span className="my-5 h-0.5 w-full bg-white dark:bg-transparent"></span>
         <div className="md:mt-6 md:flex md:w-full md:justify-between md:px-28">
           <div className="flex flex-col items-center">
             <img

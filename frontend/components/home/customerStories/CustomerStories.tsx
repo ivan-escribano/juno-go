@@ -4,7 +4,7 @@ import "swiper/css";
 
 const CustomerStories = () => {
   return (
-    <section className="flex h-full flex-col justify-between px-5 py-12 md:px-64">
+    <section className="flex h-full flex-col justify-between px-5 py-12 dark:bg-black dark:text-white md:px-64">
       <h2 className="mb-8 text-3xl font-semibold md:text-4xl">
         Customer stories
       </h2>
@@ -18,7 +18,7 @@ const CustomerStories = () => {
         effect="fade"
         className="mb-10 h-full w-full"
       >
-        <SwiperSlide className="px md:flex md:items-center">
+        <SwiperSlide className="px md:flex md:items-center  md:px-2">
           <img
             src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668820420/juno-go/testimonial4_j1nx6e.jpg"
             alt="Customer stories 1"
@@ -29,7 +29,7 @@ const CustomerStories = () => {
             Recommended!
           </p>
         </SwiperSlide>
-        <SwiperSlide className="px md:flex md:items-center">
+        <SwiperSlide className="px md:flex md:items-center  md:px-2">
           <img
             src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668820418/juno-go/testimonial5_vuymfe.jpg"
             alt="Customer stories 2"
@@ -40,7 +40,7 @@ const CustomerStories = () => {
             needed.
           </p>
         </SwiperSlide>
-        <SwiperSlide className="px md:flex md:items-center">
+        <SwiperSlide className="px md:flex md:items-center  md:px-2">
           <img
             src="https://res.cloudinary.com/dlpvgtdlv/image/upload/v1668820417/juno-go/testimonial3_gh4k9h.jpg"
             alt="Customer stories 3"
