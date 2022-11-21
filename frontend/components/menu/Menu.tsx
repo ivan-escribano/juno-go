@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
+
 const Menu = () => {
   return (
     <nav className="menu ">
-      <ul className="flex flex-col md:flex-row ">
+      <ul className="hidden text-lg md:flex md:flex-row md:justify-between">
         <li>
           <Link href={"/"}>Home</Link>
         </li>

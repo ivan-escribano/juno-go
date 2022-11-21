@@ -1,58 +1,127 @@
-import { useState } from "react";
-import Hamburger from "hamburger-react";
-import { motion, useAnimation } from "framer-motion";
-import { FaUserAlt, FaRegQuestionCircle, FaAlignJustify } from "react-icons/fa";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaUserAlt, FaRegQuestionCircle } from "react-icons/fa";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import Link from "next/link";
-const NavbarMobile = () => {
-  const [isMenuOpen, isSetMenuOpen] = useState(false);
-  const control = useAnimation();
-  const variantMenu = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: {
-      x: 100,
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-      },
-    },
-  };
-  const variantParent = {
-    hidden: {
-      height: 0,
-    },
-    visible: {
-      height: "100vh",
-      transition: {
-        when: "beforeChildren",
-      },
-    },
-  };
-  const handleMenu = () => {
-    isSetMenuOpen(!isMenuOpen);
-  };
+import Logo from "components/logo/Logo";
+interface Props {
+  setMenuDisplay: React.Dispatch<React.SetStateAction<boolean>>;
+  isMenuDisplayed: boolean;
+}
+const NavbarMobile = ({ setMenuDisplay, isMenuDisplayed }: Props) => {
   return (
-    <>
-      <button onClick={() => handleMenu()}>
-        <Hamburger></Hamburger>
-      </button>
-      <motion.section
-        variants={variantParent}
-        animate={isMenuOpen ? "hidden" : "visible"}
-      >
-        <motion.div
-          variants={variantMenu}
-          animate={isMenuOpen ? "hidden" : "visible"}
+    <AnimatePresence>
+      {isMenuDisplayed && (
+        <motion.section
+          className="fixed top-0 left-0 z-50 flex h-screen w-full flex-col bg-blue-500 p-5 text-white dark:bg-black"
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -100 }}
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-          numquam cumque delectus facilis quam maiores omnis! Molestias placeat
-          dolor porro.
-        </motion.div>
-      </motion.section>
-    </>
+          {/*Dropdown menu header*/}
+          <div
+            style={{ flex: 0.5 }}
+            className="mb-8 flex items-center justify-between"
+          >
+            <Logo />
+            <AiOutlineCloseCircle
+              onClick={() => setMenuDisplay(false)}
+              className="text-4xl"
+            />
+          </div>
+          {/* Dropdown languages */}
+          <div
+            className="languages mb-4 flex items-center text-xl"
+            style={{ flex: 0.3 }}
+          >
+            <span>SV</span>
+            <span className="mx-2">|</span>
+            <span className="rounded-full bg-white px-2 py-1 font-medium text-blue-400">
+              EN
+            </span>
+          </div>
+          {/* Dropdown links */}
+          <nav className="menu mb-5" style={{ flex: 1.9 }}>
+            <ul className="flex flex-col text-3xl md:flex-row">
+              <li className="mb-2 font-medium">
+                <Link href={"/"}>Home</Link>
+              </li>
+              <li className="my-2 font-medium">
+                <Link href={"/marketplace"}>Marketplace</Link>
+              </li>
+              <li className="my-2 font-medium">
+                <Link href={"/partners"}>Partners</Link>
+              </li>
+              <li className="mt-2 font-medium">
+                <Link href={"/join"}>Join for free</Link>
+              </li>
+            </ul>
+          </nav>
+          {/* Dropdown separator */}
+          <hr />
+          {/*Dropdown options*/}
+          <div
+            className="nav-options flex flex-col text-xl"
+            style={{ flex: 2 }}
+          >
+            <span className="mt-10 flex items-center">
+              <FaUserAlt className="mr-4" />
+              Login
+            </span>
+            <span className="mt-10 flex items-center">
+              <FaRegQuestionCircle className="mr-4" />
+              Help
+            </span>
+          </div>
+        </motion.section>
+      )}
+    </AnimatePresence>
+    // <motion.section className="fixed top-0 right-0 z-30 hidden h-screen w-screen ">
+    //   <motion.div className="flex h-full w-full flex-col bg-blue-500 p-5 text-white">
+    //     {/*Dropdown menu header*/}
+    //     <div style={{ flex: 0.5 }} className="mb-8"></div>
+    //     {/* Dropdown languages */}
+    //     <div
+    //       className="languages mb-4 flex items-center text-xl"
+    //       style={{ flex: 0.3 }}
+    //     >
+    //       <span>SV</span>
+    //       <span className="mx-2">|</span>
+    //       <span className="rounded-full bg-white px-2 py-1 font-medium text-blue-400">
+    //         EN
+    //       </span>
+    //     </div>
+    //     {/* Dropdown links */}
+    //     <nav className="menu mb-5" style={{ flex: 1.9 }}>
+    //       <ul className="flex flex-col text-3xl md:flex-row">
+    //         <li className="mb-2 font-medium">
+    //           <Link href={"/"}>Home</Link>
+    //         </li>
+    //         <li className="my-2 font-medium">
+    //           <Link href={"/marketplace"}>Marketplace</Link>
+    //         </li>
+    //         <li className="my-2 font-medium">
+    //           <Link href={"/partners"}>Partners</Link>
+    //         </li>
+    //         <li className="mt-2 font-medium">
+    //           <Link href={"/join"}>Join for free</Link>
+    //         </li>
+    //       </ul>
+    //     </nav>
+    //     {/* Dropdown separator */}
+    //     <hr />
+    //     {/*Dropdown options*/}
+    //     <div className="nav-options flex flex-col text-xl" style={{ flex: 2 }}>
+    //       <span className="mt-10 flex items-center">
+    //         <FaUserAlt className="mr-4" />
+    //         Login
+    //       </span>
+    //       <span className="mt-10 flex items-center">
+    //         <FaRegQuestionCircle className="mr-4" />
+    //         Help
+    //       </span>
+    //     </div>
+    //   </motion.div>
+    // </motion.section>
   );
 };
 

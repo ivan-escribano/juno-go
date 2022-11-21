@@ -1,9 +1,5 @@
-// import Logo from "components/logo";
-// import Menu from "components/menu";
-// import NavbarMobile from "components/navbar/navbar-mobile/NavbarMobile";
-// import NavbarMobile from "components/navbar/navbar-mobile/NavbarMobile";
-// import Link from "next/link";
 import Footer from "components/footer/Footer";
+import Navbar from "components/navbar/Navbar";
 import { DarkContext } from "context/DarkProvider";
 import { useContext } from "react";
 interface Props {
@@ -13,8 +9,9 @@ const Layout = ({ children }: Props) => {
   const { isDarkMode } = useContext(DarkContext);
   return (
     <>
-      <div className={`${isDarkMode ? "dark" : ""}`}>
+      <div className={`${isDarkMode ? "dark" : ""} `}>
         {/* <NavbarMobile /> */}
+        <Navbar />
         <main className="main-content h-full ">{children}</main>
         <Footer />
       </div>
