@@ -9,7 +9,7 @@ interface Props {
 const PriceContainer = ({ price, bgColor, textColor, feeTime }: Props) => {
   return (
     <section
-      className={`pricing-plans mx-10 rounded-xl ${bgColor} ${textColor} my-10 px-5 py-10`}
+      className={`pricing-plans  rounded-xl md:mx-10 ${bgColor} ${textColor} my-10 px-5 py-10`}
     >
       <div>
         <div className="flex flex-col items-center">
