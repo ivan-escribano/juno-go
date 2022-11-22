@@ -12,7 +12,7 @@ app.use(express.urlencoded());
 app.use(
     cors({
         credentials: true,
-        origin: "http://localhost:3000",
+        origin: process.env.CLIENT_URL,
     })
 );
 
@@ -23,7 +23,9 @@ app.use('/parse', api);
 //Access to parse dashboard
 app.use("/dashboard", dashboard);
 
-
+app.get("/", (req, res, next) => {
+    res.send("<h1>Hello welcome to the juno api, you can access the parse server dashboard: https://juno-go-api.onrender.com/dashboard</h1>")
+});
 
 //LOGIN
 app.post("/login", async (req, res, next) => {
