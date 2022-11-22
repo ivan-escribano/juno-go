@@ -1,3 +1,4 @@
+import AuthModal from "components/authModal/AuthModal";
 import FadeAnimation from "components/fadeAnimation/FadeAnimation";
 import Activities from "components/home/activities/Activities";
 import CustomerStories from "components/home/customerStories/CustomerStories";
@@ -7,6 +8,7 @@ import Pricing from "components/home/pricing/Pricing";
 export default function Home() {
   return (
     <>
+      <AuthModal></AuthModal>
       <HeaderHome />
       <FadeAnimation>
         <Activities />

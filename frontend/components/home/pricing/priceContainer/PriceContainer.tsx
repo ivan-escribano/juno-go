@@ -1,4 +1,5 @@
-import React from "react";
+import { ModalContext } from "context/ModalProvider";
+import { useContext } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 interface Props {
   price: string;
@@ -7,6 +8,7 @@ interface Props {
   feeTime: string;
 }
 const PriceContainer = ({ price, bgColor, textColor, feeTime }: Props) => {
+  const { setShowModal } = useContext(ModalContext);
   return (
     <section
       className={`pricing-plans  rounded-xl md:mx-10 ${bgColor} ${textColor} my-10 px-5 py-10`}
@@ -56,7 +58,10 @@ const PriceContainer = ({ price, bgColor, textColor, feeTime }: Props) => {
             <p style={{ flex: 11 }}>Pay your membership monthly by card!</p>
           </div>
           <div className="mt-10 flex justify-center">
-            <button className="rounded-lg border-2 border-blue-400 px-10 py-2">
+            <button
+              className="rounded-lg border-2 border-blue-400 px-10 py-2"
+              onClick={() => setShowModal(true)}
+            >
               Sign up
             </button>
           </div>
