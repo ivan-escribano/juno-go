@@ -24,7 +24,7 @@ app.use('/parse', api);
 app.use("/dashboard", dashboard);
 
 app.get("/", (req, res, next) => {
-    res.send("<h1>Hello welcome to the juno api, you can access the parse server dashboard:<br> <a href'https://juno-go-api.onrender.com/dashboard'>Parse server dashboard</a></h1>")
+    res.send("<h1>Hello welcome to the juno api, you can access the parse server dashboard:<br> https://juno-go-api.onrender.com/dashboard'</h1>")
 });
 
 //LOGIN
