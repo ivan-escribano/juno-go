@@ -13,15 +13,13 @@
 ## Demo
 
 #### 💻 Desktop demo.
-![front](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
-![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
+![desktop1](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 
 #### 💻 Desktop demo2.
 ![desktop1](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 
 
 #### 📱 mobile demo
-
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669162442/juno-go/mobile2_ww2cxs.gif)
 
