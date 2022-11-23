@@ -9,16 +9,18 @@ export default function Home() {
   return (
     <>
       <AuthModal></AuthModal>
-      <HeaderHome />
-      <FadeAnimation>
-        <Activities />
-      </FadeAnimation>
-      <FadeAnimation>
-        <Pricing />
-      </FadeAnimation>
-      <FadeAnimation>
-        <CustomerStories />
-      </FadeAnimation>
+      <div className="dark:bg-black">
+        <HeaderHome />
+        <FadeAnimation>
+          <Activities />
+        </FadeAnimation>
+        <FadeAnimation>
+          <Pricing />
+        </FadeAnimation>
+        <FadeAnimation>
+          <CustomerStories />
+        </FadeAnimation>
+      </div>
     </>
   );
 }

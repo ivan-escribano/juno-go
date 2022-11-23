@@ -13,7 +13,9 @@ const Layout = ({ children }: Props) => {
         {/* <NavbarMobile /> */}
         <Navbar />
         <main className="main-content h-full ">{children}</main>
-        <Footer />
+        <div className="dark:bg-black">
+          <Footer />
+        </div>
       </div>
     </>
   );

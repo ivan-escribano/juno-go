@@ -59,7 +59,7 @@ const PriceContainer = ({ price, bgColor, textColor, feeTime }: Props) => {
           </div>
           <div className="mt-10 flex justify-center">
             <button
-              className="rounded-lg border-2 border-blue-400 px-10 py-2"
+              className="buttonHover rounded-lg border-2 border-blue-400 px-10 py-2"
               onClick={() => setShowModal(true)}
             >
               Sign up

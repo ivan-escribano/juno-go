@@ -15,7 +15,7 @@ const NavbarMobile = ({ setMenuDisplay, isMenuDisplayed }: Props) => {
     <AnimatePresence>
       {isMenuDisplayed && (
         <motion.section
-          className="fixed top-0 left-0 z-50 flex h-screen w-full flex-col bg-blue-500 p-5 text-white dark:bg-black"
+          className="fixed top-0 left-0 z-30 flex h-screen w-full flex-col bg-blue-500 p-5 text-white dark:bg-black"
           animate={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           exit={{ opacity: 0, y: -100 }}
@@ -49,13 +49,13 @@ const NavbarMobile = ({ setMenuDisplay, isMenuDisplayed }: Props) => {
                 <Link href={"/"}>Home</Link>
               </li>
               <li className="my-2 font-medium">
-                <Link href={"/marketplace"}>Marketplace</Link>
+                <Link href={"/comingSoon"}>Marketplace</Link>
               </li>
               <li className="my-2 font-medium">
-                <Link href={"/partners"}>Partners</Link>
+                <Link href={"/comingSoon"}>Partners</Link>
               </li>
               <li className="mt-2 font-medium">
-                <Link href={"/join"}>Join for free</Link>
+                <Link href={"/comingSoon"}>Join for free</Link>
               </li>
             </ul>
           </nav>

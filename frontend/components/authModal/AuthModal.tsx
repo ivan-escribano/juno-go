@@ -12,40 +12,44 @@ import { AnimatePresence, motion } from "framer-motion";
 const AuthModal = () => {
   const { isModalShow, setShowModal } = useContext(ModalContext);
   const [typeAuth, setAuthType] = useState("login");
-  const loginMutation = useMutation(login, {
-    onSuccess: (data) => {
-      toast.success(data);
-      console.log(data);
-    },
-    onError: (error) => {
-      const err = error as any;
-      toast.error(err.response.data.message);
-    },
-  });
-  const registerMutation = useMutation(signup, {
-    onSuccess: (data) => {
-      toast.success(data);
-    },
-    onError: (error) => {
-      const err = error as any;
-      if (
-        err.response.data ===
-        "ErrorParseError: 202 Account already exists for this username."
-      )
-        toast.error("Account already exists for this username.");
-      else {
-        toast.error(err.response.data);
-      }
-    },
-  });
+  const { mutate: loginMutation, isLoading: isLoadingLogin } = useMutation(
+    login,
+    {
+      onSuccess: (data) => {
+        toast.success(data);
+        console.log(data);
+      },
+      onError: (error) => {
+        const err = error as any;
+        toast.error(err.response.data.message);
+      },
+    }
+  );
+  const { mutate: registerMutation, isLoading: isLoadingRegister } =
+    useMutation(signup, {
+      onSuccess: (data) => {
+        toast.success(data);
+      },
+      onError: (error) => {
+        const err = error as any;
+        if (
+          err.response.data ===
+          "ErrorParseError: 202 Account already exists for this username."
+        )
+          toast.error("Account already exists for this username.");
+        else {
+          toast.error(err.response.data);
+        }
+      },
+    });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData);
     e.preventDefault();
     if (typeAuth === "login") {
-      loginMutation.mutate(data);
+      loginMutation(data);
     } else {
-      registerMutation.mutate(data);
+      registerMutation(data);
     }
     setShowModal(false);
   };
@@ -102,13 +106,13 @@ const AuthModal = () => {
                 </label>
                 <div className="mt-4 flex justify-center">
                   <button
-                    className=" rounded-md bg-red-500 px-10 py-1 text-white"
+                    className=" buttonClose rounded-md bg-red-500 px-10 py-1 text-white"
                     onClick={() => setShowModal(false)}
                   >
                     Close
                   </button>
                   <button
-                    className="main-bg ml-2 rounded-md px-10 py-1 text-white"
+                    className="main-bg buttonHover ml-2 rounded-md px-10 py-1 text-white"
                     type="submit"
                   >
                     {typeAuth === "login" ? "Login" : "Register"}

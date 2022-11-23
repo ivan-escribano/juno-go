@@ -12,7 +12,7 @@ const HeaderBody = () => {
       </p>
       <div className="my-5 flex justify-center md:justify-start">
         <button
-          className="main-bg rounded-lg py-3 px-10 text-xl font-medium text-white"
+          className="main-bg buttonHover  rounded-lg py-3 px-10 text-xl font-medium text-white"
           onClick={() => setShowModal(true)}
         >
           Get started

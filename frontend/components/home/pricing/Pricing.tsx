@@ -6,7 +6,7 @@ import PriceContainer from "./priceContainer/PriceContainer";
 const Pricing = () => {
   return (
     <section className="bg-blue-200 p-4 dark:bg-black dark:text-white">
-      <div className="pricing-content my-10 flex flex-col px-10 text-center  md:items-center">
+      <div className="pricing-content my-10 flex flex-col items-center px-10  text-center">
         <h1 className="px-2 text-3xl font-medium md:text-5xl">
           Let’s get you started with Juno!
         </h1>

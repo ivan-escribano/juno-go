@@ -9,20 +9,20 @@ const Menu = () => {
       <ul className="hidden text-lg md:flex md:flex-row md:justify-between">
         <li>
           <button
-            className="main-bg rounded-md px-5 py-1 font-semibold text-white"
+            className="buttonHover main-bg rounded-md px-5 py-1 font-semibold text-white"
             onClick={() => setShowModal(true)}
           >
             Login
           </button>
         </li>
-        <li>
+        <li className="cool-link">
           <Link href={"/"}>Home</Link>
         </li>
-        <li>
-          <Link href={"/partners"}>Partners</Link>
+        <li className="cool-link">
+          <Link href={"/comingSoon"}>Partners</Link>
         </li>
-        <li>
-          <Link href={"/join"}>Join for free</Link>
+        <li className="cool-link">
+          <Link href={"/comingSoon"}>Join for free</Link>
         </li>
       </ul>
     </nav>

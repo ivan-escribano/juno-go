@@ -14,3 +14,35 @@
   background-color: black;
   color: white;
 }
+
+.buttonHover {
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonHover:hover {
+  background-color: rgb(11, 95, 221);
+  color: white;
+  transform: scale(1.05);
+}
+
+.buttonClose {
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonClose:hover {
+  background-color: rgb(201, 5, 5);
+  color: white;
+  transform: scale(1.05);
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(27, 170, 204);
+  transition: width 0.2s;
+}
+.cool-link:hover::after {
+  width: 100%;
+}
