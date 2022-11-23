@@ -14,7 +14,6 @@
 ## Demo
 
 #### 💻 Desktop demo.
-![desktop1](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161992/juno-go/desktop2_kichlu.gif)
 
 
@@ -24,6 +23,7 @@
 
 
 ## Tech Used
+![desktop1](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 
 #### Frontend
 - React
