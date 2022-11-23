@@ -20,8 +20,8 @@
 #### 📱 mobile demo
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669162442/juno-go/mobile2_ww2cxs.gif)
 
-### Organization
-📝 checko out my organization : [_here_](https://sour-linen-3ee.notion.site/JUNO-LIFE-9f92e7c6a37c4a20b8ad39ab2b2d23f2) 
+#### Organization
+📝 Check out my organization : [_here_](https://sour-linen-3ee.notion.site/JUNO-LIFE-9f92e7c6a37c4a20b8ad39ab2b2d23f2) 
 
 ## Tech Used
 
