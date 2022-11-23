@@ -15,7 +15,7 @@
 
 #### 💻 Desktop demo.
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161992/juno-go/desktop2_kichlu.gif)
-![desktop1](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669215515/juno-go/desktop-gif_xcvkad.gif)
+![desktop-gif](https://user-images.githubusercontent.com/82597141/203578719-a457f628-d46d-42b4-995e-4d263db39d38.gif)
 
 
 #### 📱 mobile demo
