@@ -13,6 +13,7 @@
 ## Demo
 
 #### 💻 Desktop demo.
+![front](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669163428/juno-go/vercel_deploy_egit5v.jpg)
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161619/juno-go/desktop-gif_xbpapf.gif)
 
 #### 💻 Desktop demo2.
