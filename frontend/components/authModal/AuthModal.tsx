@@ -22,6 +22,8 @@ const AuthModal = () => {
     onError: (error) => {
       const err = error as any;
       toast.error(err.response.data.message);
+      setLoaderShow(false);
+      setShowModal(false);
     },
   });
   //REGISTER MUTATION
@@ -39,6 +41,8 @@ const AuthModal = () => {
       else {
         toast.error("something went wrong with sign up, try again");
       }
+      setLoaderShow(false);
+      setShowModal(false);
     },
   });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -46,11 +50,14 @@ const AuthModal = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData);
     e.preventDefault();
-    if (typeAuth === "login") {
-      await loginMutation(data);
-    } else {
-      await registerMutation(data);
-    }
+    try {
+      if (typeAuth === "login") {
+        await loginMutation(data);
+      } else {
+        await registerMutation(data);
+      }
+    } catch (error) {}
+
     setLoaderShow(false);
     setShowModal(false);
   };
