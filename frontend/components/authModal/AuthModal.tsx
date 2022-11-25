@@ -9,48 +9,49 @@ import {
 } from "react-icons/ri";
 import { ModalContext } from "context/ModalProvider";
 import { AnimatePresence, motion } from "framer-motion";
+import { LoaderContext } from "context/LoaderProvider";
 const AuthModal = () => {
   const { isModalShow, setShowModal } = useContext(ModalContext);
   const [typeAuth, setAuthType] = useState("login");
-  const { mutate: loginMutation, isLoading: isLoadingLogin } = useMutation(
-    login,
-    {
-      onSuccess: (data) => {
-        toast.success(data);
-        console.log(data);
-      },
-      onError: (error) => {
-        const err = error as any;
-        toast.error(err.response.data.message);
-      },
-    }
-  );
-  const { mutate: registerMutation, isLoading: isLoadingRegister } =
-    useMutation(signup, {
-      onSuccess: (data) => {
-        toast.success(data);
-      },
-      onError: (error) => {
-        const err = error as any;
-        if (
-          err.response.data ===
-          "ErrorParseError: 202 Account already exists for this username."
-        )
-          toast.error("Account already exists for this username.");
-        else {
-          toast.error(err.response.data);
-        }
-      },
-    });
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const { setLoaderShow } = useContext(LoaderContext);
+  //LOGIN MUTATION
+  const { mutateAsync: loginMutation } = useMutation(login, {
+    onSuccess: (data) => {
+      toast.success(data);
+    },
+    onError: (error) => {
+      const err = error as any;
+      toast.error(err.response.data.message);
+    },
+  });
+  //REGISTER MUTATION
+  const { mutateAsync: registerMutation } = useMutation(signup, {
+    onSuccess: (data) => {
+      toast.success(data);
+    },
+    onError: (error) => {
+      const err = error as any;
+      if (
+        err.response.data ===
+        "ErrorParseError: 202 Account already exists for this username."
+      )
+        toast.error("Account already exists for this username.");
+      else {
+        toast.error("something went wrong with sign up, try again");
+      }
+    },
+  });
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoaderShow(true);
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData);
     e.preventDefault();
     if (typeAuth === "login") {
-      loginMutation(data);
+      await loginMutation(data);
     } else {
-      registerMutation(data);
+      await registerMutation(data);
     }
+    setLoaderShow(false);
     setShowModal(false);
   };
 
@@ -59,7 +60,7 @@ const AuthModal = () => {
       <AnimatePresence>
         {isModalShow && (
           <section
-            className=" fixed top-0 z-50 flex  h-screen w-screen items-center justify-center"
+            className=" fixed top-0 z-40 flex  h-screen w-screen items-center justify-center"
             style={{ backgroundColor: "#000000c4" }}
           >
             <motion.div

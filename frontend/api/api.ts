@@ -10,7 +10,6 @@ interface ILogin {
   password?: string;
 }
 export const login = async (data: ILogin) => {
-  console.log(process.env.SERVER_URL);
   const response = await api.post("/login", data);
   return response.data;
 };
