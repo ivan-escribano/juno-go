@@ -17,6 +17,12 @@
     "baseUrl": ".",
     "useUnknownInCatchVariables": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/chatbot/ChatbotComponent.jsx",
+    "components/chatbot/chatbotForm/ChatbotForm.jsx"
+  ],
   "exclude": ["node_modules"]
 }

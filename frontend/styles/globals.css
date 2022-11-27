@@ -46,3 +46,18 @@
 .cool-link:hover::after {
   width: 100%;
 }
+
+.rsc-header,
+.rsc-ts-bot > .rsc-ts-bubble,
+.rsc-float-button {
+  background-color: rgb(27, 170, 204) !important;
+}
+
+.rsc-os-option-element {
+  background-color: rgb(7, 128, 158) !important;
+}
+
+.rsc-ts-user > .rsc-ts-bubble {
+  overflow: unset;
+  max-width: none;
+}
