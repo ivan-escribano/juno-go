@@ -46,16 +46,33 @@ const NavbarMobile = ({ setMenuDisplay, isMenuDisplayed }: Props) => {
           <nav className="menu mb-5" style={{ flex: 1.9 }}>
             <ul className="flex flex-col text-3xl md:flex-row">
               <li className="mb-2 font-medium">
-                <Link href={"/"}>Home</Link>
+                <Link href={"/"} onClick={() => setMenuDisplay(false)}>
+                  Home
+                </Link>
               </li>
               <li className="my-2 font-medium">
-                <Link href={"/comingSoon"}>Marketplace</Link>
+                <Link
+                  href={"/comingSoon"}
+                  onClick={() => setMenuDisplay(false)}
+                >
+                  Marketplace
+                </Link>
               </li>
               <li className="my-2 font-medium">
-                <Link href={"/comingSoon"}>Partners</Link>
+                <Link
+                  href={"/comingSoon"}
+                  onClick={() => setMenuDisplay(false)}
+                >
+                  Partners
+                </Link>
               </li>
               <li className="mt-2 font-medium">
-                <Link href={"/comingSoon"}>Join for free</Link>
+                <Link
+                  href={"/comingSoon"}
+                  onClick={() => setMenuDisplay(false)}
+                >
+                  Join for free
+                </Link>
               </li>
             </ul>
           </nav>
@@ -68,7 +85,10 @@ const NavbarMobile = ({ setMenuDisplay, isMenuDisplayed }: Props) => {
           >
             <span
               className="mt-10 flex items-center"
-              onClick={() => setShowModal(true)}
+              onClick={() => {
+                setShowModal(true);
+                setMenuDisplay(false);
+              }}
             >
               <FaUserAlt className="mr-4" />
               Login

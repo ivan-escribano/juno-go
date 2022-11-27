@@ -6,6 +6,7 @@ import NavbarMobile from "./navbar-mobile/NavbarMobile";
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuDisplayed, setMenuDisplay] = useState<boolean>(false);
@@ -18,7 +19,9 @@ const Navbar = () => {
         style={{ top: "0.01" }}
       >
         <div className="md:flex-1">
-          <Logo></Logo>
+          <Link href={"/"}>
+            <Logo></Logo>
+          </Link>
         </div>
         {/* Menu desktop */}
         <div className=" md:flex-1">
