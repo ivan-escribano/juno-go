@@ -17,7 +17,7 @@ const ChatbotComponent = () => {
         toggleFloating={toggleFloating}
         floating={true}
         className="chatbot-react"
-        // speechSynthesis={{ enable: `${opened ? true : false}`, lang: "en" }}
+        speechSynthesis={{ enable: `${opened ? true : false}`, lang: "en" }}
         steps={[
           {
             id: "welcome",

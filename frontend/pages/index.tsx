@@ -9,9 +9,7 @@ import ChatbotComponent from "components/chatbot/ChatbotComponent";
 export default function Home() {
   return (
     <>
-      <ChatbotComponent />
       <Loader></Loader>
-      <AuthModal></AuthModal>
       <div className="dark:bg-black">
         <HeaderHome />
         <FadeAnimation>

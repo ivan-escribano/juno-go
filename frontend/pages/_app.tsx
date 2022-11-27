@@ -6,7 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import ModalProvider from "context/ModalProvider";
 import LoaderProvider from "context/LoaderProvider";
-
+import AuthModal from "components/authModal/AuthModal";
+import ChatbotComponent from "components/chatbot/ChatbotComponent";
 // Create a client
 const queryClient = new QueryClient();
 export default function App({ Component, pageProps }: AppProps) {
@@ -16,6 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <LoaderProvider>
           <ModalProvider>
             <DarkProvider>
+              <AuthModal />
+              <ChatbotComponent />
               <Layout>
                 <Component {...pageProps} />
               </Layout>

@@ -5,7 +5,7 @@ interface IDarkMode {
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element[];
 }
 export const DarkContext = createContext<IDarkMode>({
   isDarkMode: false,
