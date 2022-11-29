@@ -20,6 +20,10 @@
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161992/juno-go/desktop2_kichlu.gif)
 
 #### 💬 Chatbot talk
+![chatbot 1)](https://user-images.githubusercontent.com/82597141/204611143-6d512b6f-af89-46f8-9833-0108864a97a4.gif)
+![Chatbot 2](https://user-images.githubusercontent.com/82597141/204611136-3e81fda3-6f29-4e15-8c2b-7cd2e3b7867f.gif)
+
+
 
 #### 📱 mobile demo
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669162442/juno-go/mobile2_ww2cxs.gif)
