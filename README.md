@@ -15,9 +15,11 @@
 
 #### 💻 Desktop demo.
 ![desktop-gif](https://user-images.githubusercontent.com/82597141/203578719-a457f628-d46d-42b4-995e-4d263db39d38.gif)
+
+#### 👥 Login and register
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669161992/juno-go/desktop2_kichlu.gif)
 
-
+#### 💬 Chatbot talk
 
 #### 📱 mobile demo
 ![desktop2](https://res.cloudinary.com/dlpvgtdlv/image/upload/v1669162442/juno-go/mobile2_ww2cxs.gif)
